@@ -9,6 +9,15 @@
 # move said applications out of the umbrella.
 import Config
 
+config :database, Backend.Database.Repo,
+  database: "database_repo",
+  username: "user",
+  password: "pass",
+  hostname: "localhost"
+
+config :database,
+  ecto_repos: [Backend.Database.Repo]
+
 # Sample configuration:
 #
 #     config :logger, :console,

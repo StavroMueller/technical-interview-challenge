@@ -10,6 +10,7 @@ defmodule Backend.Database.Application do
     children = [
       # Starts a worker by calling: Backend.Database.Worker.start_link(arg)
       # {Backend.Database.Worker, arg}
+      Backend.Database.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
