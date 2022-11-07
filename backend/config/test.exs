@@ -7,6 +7,14 @@ config :api, Backend.ApiWeb.Endpoint,
   secret_key_base: "2YA7GErhlVzSKShs/wReIV5QlOyqwutVOlI6xO6wlqW4de2baIbe44k3MFk1QeSS",
   server: false
 
+config :database, Backend.Database.Repo,
+  database: "postgres_test",
+  username: "postgres_test",
+  password: "postgres_test",
+  port: "45432",
+  hostname: "localhost"
+
+
 # Print only warnings and errors during test
 config :logger, level: :warn
 
