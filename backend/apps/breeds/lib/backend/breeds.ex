@@ -13,9 +13,13 @@ defmodule Backend.Breeds do
 
   """
 
-  alias Backend.Breeds.Queries.GetBreeds
+  alias Backend.Breeds.Queries.{GetBreeds, GetBreed}
 
   def get_breeds() do
     GetBreeds.run()
+  end
+
+  def get_breed(id) do
+    GetBreed.run(id)
   end
 end
