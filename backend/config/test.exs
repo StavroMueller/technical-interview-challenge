@@ -14,7 +14,6 @@ config :database, Backend.Database.Repo,
   port: "45432",
   hostname: "localhost"
 
-
 # Print only warnings and errors during test
 config :logger, level: :warn
 
