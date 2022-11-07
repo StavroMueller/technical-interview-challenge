@@ -12,7 +12,8 @@ config :database, Backend.Database.Repo,
   username: "postgres_test",
   password: "postgres_test",
   port: "45432",
-  hostname: "localhost"
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox
 
 # Print only warnings and errors during test
 config :logger, level: :warn

@@ -15,7 +15,7 @@ defmodule Backend.Database.Schema.Breed do
   @optional_params []
 
   schema "breeds" do
-    field(:name, :string)
+    field(:label, :string)
     timestamps()
   end
 
