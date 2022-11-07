@@ -16,6 +16,7 @@ defmodule Backend.Database.Schema.Breed do
 
   schema "breeds" do
     field(:label, :string)
+    field(:image_url, :string)
     timestamps()
   end
 

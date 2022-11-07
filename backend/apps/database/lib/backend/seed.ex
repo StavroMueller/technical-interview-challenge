@@ -11,35 +11,44 @@ defmodule Backend.Database.Seed do
 
   defp seed_breeds() do
     Repo.insert!(%Breed{
-      label: "Affen Pinscher"
-    })
-
-    Repo.insert!(%Breed{
-      label: "Border Collie"
+      label: "Affen Pinscher",
+      image_url: "affenpinscher.jpg"
     })
     Repo.insert!(%Breed{
-      label: "Boxer"
+      label: "Border Collie",
+      image_url: "border_collie.jpg"
     })
     Repo.insert!(%Breed{
-      label: "Cocker Spaniel"
+      label: "Boxer",
+      image_url: "boxer.jpg"
     })
     Repo.insert!(%Breed{
-      label: "English Bulldog"
+      label: "Cocker Spaniel",
+      image_url: "cocker_spaniel.jpg"
     })
     Repo.insert!(%Breed{
-      label: "Great Dane"
+      label: "English Bulldog",
+      image_url: "english_bulldog.jpg"
     })
     Repo.insert!(%Breed{
-      label: "Irish Terrier"
+      label: "Great Dane",
+      image_url: "great_dane.jpg"
     })
     Repo.insert!(%Breed{
-      label: "Norwich Terrier"
+      label: "Irish Terrier",
+      image_url: "irish_terrier.jpg"
     })
     Repo.insert!(%Breed{
-      label: "Pomeranian"
+      label: "Norwich Terrier",
+      image_url: "norwich_terrier.jpg"
     })
     Repo.insert!(%Breed{
-      label: "Shetland Sheepdog"
+      label: "Pomeranian",
+      image_url: "pomeranian.jpg"
+    })
+    Repo.insert!(%Breed{
+      label: "Shetland Sheepdog",
+      image_url: "shetland_sheepdog.jpg"
     })
   end
   

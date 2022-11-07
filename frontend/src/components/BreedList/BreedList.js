@@ -11,6 +11,7 @@ const BREEDS_QUERY = gql`
         breeds {
             id
             label
+            image_url
         }
     }
 `;
@@ -22,7 +23,6 @@ function BreedList() {
     }
 
     if (error) {
-        console.log(error)
         return <pre> {error.message} </pre>
     }
 
@@ -30,18 +30,17 @@ function BreedList() {
 
     return (
         <div>
-            {data.breeds.map((breed) => (
-                <Accordion>
+            {data.breeds.map((breed) => {
+                const image_url = `http://localhost:4000/images/${breed.image_url}`
+                return <Accordion>
                     <AccordionSummary id={breed.label}>
                         <Typography>{breed.label}</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography>
-                            Image goes here!
-                        </Typography>
+                        <img src={image_url} style={{width: "100%"}}/>
                     </AccordionDetails>
                 </Accordion>
-            ))}
+            })}
         </div>
     )
 }
