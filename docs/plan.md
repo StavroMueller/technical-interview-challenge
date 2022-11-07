@@ -1,5 +1,11 @@
 # Plan for infra
 
+Overall structure
+/backend
+    - elixir app lives here    
+/frontend
+    - react app lives here
+
 
 ## Elixir backend
 - Umbrella app with apps:
@@ -49,4 +55,5 @@
 - extra stuff
     - graphql helper to make queries with fetch
     - maybe tests, but probably not (take longer than testing the backend)
+        - if tests are made, can run e2e with hound in elixir (haha)
 
