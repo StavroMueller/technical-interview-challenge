@@ -3,12 +3,17 @@ defmodule Backend.Breeds.Test.Queries.GetBreedsTest do
 
   import Backend.Database.Factory, only: [insert: 2]
 
+  alias Backend.Breeds.Queries.GetBreeds
+
   setup do
     insert(:breed, %{label: "test me"})
+    insert(:breed, %{label: "another breed"})
     :ok
   end
 
   test "should get all breeds" do
-    assert 1 == 2
+    {:ok, breeds} = GetBreeds.run()
+
+    assert length(breeds) == 2
   end
 end

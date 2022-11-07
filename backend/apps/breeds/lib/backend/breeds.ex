@@ -12,7 +12,10 @@ defmodule Backend.Breeds do
       :world
 
   """
-  def hello do
-    :world
+
+  alias Backend.Breeds.Queries.GetBreeds
+
+  def get_breeds() do
+    GetBreeds.run()
   end
 end
