@@ -43,6 +43,7 @@ defmodule Backend.Api.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:absinthe_plug, "~> 1.5"},
+      {:cors_plug, "~> 3.0"},
       {:graphql, in_umbrella: true}
     ]
   end
