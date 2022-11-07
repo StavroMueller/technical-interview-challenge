@@ -4,12 +4,19 @@ defmodule Backend.Graphql.Schema do
   """
   use Absinthe.Schema
 
+  alias Backend.Graphql.Resolvers.Breeds
+
   import_types(Backend.Graphql.Schema.Breed)
 
   query do
     @desc "Get a list of breeds"
     field(:breeds, list_of(:breed)) do
-      resolve({:ok, "hi"})
+      resolve(&Breeds.get_breeds/3)
+    end
+
+    @desc "Get one breed"
+    field(:breed, :breed) do
+      resolve(&Breeds.get_breed/3)
     end
   end
 end

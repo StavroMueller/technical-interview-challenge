@@ -12,7 +12,6 @@ defmodule Backend.Breeds.Test.Queries.GetBreed do
   end
 
   test "should get a breed that already exists", %{breed: %{id: id}} do
-    IO.inspect(id)
     {:ok, result} = GetBreed.run(id)
 
     assert result.id == id
