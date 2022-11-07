@@ -10,9 +10,10 @@
 import Config
 
 config :database, Backend.Database.Repo,
-  database: "database_repo",
-  username: "user",
-  password: "pass",
+  database: "postgres",
+  username: "postgres",
+  password: "postgres",
+  port: "55432",
   hostname: "localhost"
 
 config :database,
@@ -25,3 +26,20 @@ config :database,
 #       format: "$date $time [$level] $metadata$message\n",
 #       metadata: [:user_id]
 #
+config :api,
+  namespace: Backend.Api
+
+# Configures the endpoint
+config :api, Backend.ApiWeb.Endpoint,
+  url: [host: "localhost"],
+  render_errors: [view: Backend.ApiWeb.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: Backend.Api.PubSub,
+  live_view: [signing_salt: "FyTBJ/Xl"]
+
+# Configures Elixir's Logger
+config :logger, :console,
+  format: "$time $metadata[$level] $message\n",
+  metadata: [:request_id]
+
+# Use Jason for JSON parsing in Phoenix
+config :phoenix, :json_library, Jason
