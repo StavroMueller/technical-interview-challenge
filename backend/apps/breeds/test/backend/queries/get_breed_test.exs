@@ -16,5 +16,4 @@ defmodule Backend.Breeds.Test.Queries.GetBreed do
 
     assert result.id == id
   end
-
 end

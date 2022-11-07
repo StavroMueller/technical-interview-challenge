@@ -21,7 +21,7 @@ defmodule Backend.Database.Test.DataCase do
     end
   end
 
-  setup _tags do 
+  setup _tags do
     :ok = Sandbox.checkout(Repo)
   end
 end
